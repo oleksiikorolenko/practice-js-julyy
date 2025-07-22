@@ -23,7 +23,7 @@
 // "10 входить в першу чверть"
 
 // const min = Math.floor(Math.random() * (59 - 0) + 0);
-  
+
 // if (0 <= min && min <= 15) {
 //     alert(`${min} входить в першу чверть`);
 // } else if (min > 15 && min <= 30) {
@@ -131,7 +131,7 @@
 // while (count <= 20) {
 //      console.log(count);
 //     count += 1;
-   
+
 // };
 
 // Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
@@ -161,8 +161,8 @@
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
-// function min(a, b) { 
-   
+// function min(a, b) {
+
 //     if (typeof a !== "number"|| typeof b !== "number") {
 //         return 'Not a number!';
 //     } else {
@@ -174,3 +174,47 @@
 // const result = min(100, 'help');
 
 // console.log(result);
+
+// Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+
+
+// function isAdult(age) {
+//     if (age >= 18) {
+//         return true;
+//     } else {
+//         confirm('Вам немає 18. Продовжити?');
+//         return false
+//     }
+// }
+
+// const adult = isAdult(15);
+
+// console.log(adult);
+
+
+// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+// function fizzBuzz(num) {
+//     for (let i = 1; i <= num; i++){
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             console.log('buzzfizz');
+//         }else if (i % 3 === 0) {
+//             console.log('fizz');
+//         }else if (i % 5 === 0) {
+//             console.log('buzz');
+//         } else {
+//             console.log(i);
+//         }
+        
+//     };
+// }
+
+
+// fizzBuzz(100);
+
