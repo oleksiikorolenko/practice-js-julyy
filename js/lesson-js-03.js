@@ -177,47 +177,146 @@
 //   console.log(result); // 24
 
 
-class Calculator {
-    constructor(){
-    this.value = 0
-    }
+// class Calculator {
+//     constructor(){
+//     this.value = 0
+//     }
 
-    number(value) {
-        this.value = value;
-        return this;
-    }
+//     number(value) {
+//         this.value = value;
+//         return this;
+//     }
 
-    add(value) {
-        this.value += value;
-        return this;
-    }
+//     add(value) {
+//         this.value += value;
+//         return this;
+//     }
 
-    subtract(value) {
-        this.value -= value;
-        return this;
-    }
+//     subtract(value) {
+//         this.value -= value;
+//         return this;
+//     }
 
-    multiply(value) {
-        this.value *= value;
-        return this;
-    }
+//     multiply(value) {
+//         this.value *= value;
+//         return this;
+//     }
 
-    divide(value) {
-        if (value === 0) {
-            return Error("Division by zero is not allowed");
-        } this.value /= value;
-        return this;
-    }
+//     divide(value) {
+//         if (value === 0) {
+//             return Error("Division by zero is not allowed");
+//         } this.value /= value;
+//         return this;
+//     }
 
-    getResult() {
-        return this.value;
-}
+//     getResult() {
+//         return this.value;
+// }
 
-}
+// }
 
-const calc = new Calculator();
+// const calc = new Calculator();
 
 
-const result = calc.number(10).add(5).subtract(3).multiply(4).divide(2).getResult();
+// const result = calc.number(10).add(5).subtract(3).multiply(4).divide(2).getResult();
 
-console.log(result); // 24
+// console.log(result); // 24
+//================================================================================================================
+
+
+
+ // Напиши клас Client який створює об'єкт з властивостями login email.
+ // Оголоси приватні властивості #login #email, доступ до яких зроби 
+ // через геттер та сеттер login email
+ 
+ 
+// class Client {
+    
+//     #login;
+//     #email
+
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+    
+//     get login() {
+//         return this.#login;
+//     }
+
+//     set login(newLogin) {
+//         this.#login = newLogin;
+//     }
+
+    
+//     get email() {
+//         return this.#email;
+//     }
+
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+
+
+//  }
+
+//============================================================================================================
+
+  //  Наслідування у класах!
+  // Cтворіть клас `Person`, який містить наступні властивості:
+  //  - `name` - ім'я людини;
+  //  - `age`- вік людини;
+  //  - `gender` - стать людини;
+  //  - `email`- електронна пошта людини.
+  
+  // Крім того, клас `Person` має мати метод `getDetails()`,
+  // який повертає об'єкт з ім'ям, віком, статтю 
+  //та електронною поштою людини.
+  
+  // 
+  // Потім Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+  //  - salary - зарплата співробітника;
+  //  - department - відділ, в якому працює співробітник.
+  // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
+
+  
+// class Person {
+//     name;
+//     age;
+//     gender;
+//     email;
+
+//     constructor(name, age, gender, email) {
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//         this.email = email;
+//     }
+
+//     getDetails() {
+//         return {
+//             name: this.name,
+//             age: this.age,
+//             gender: this.gender,
+//             email: this.email
+//             }
+//     }
+// }
+  
+
+// class Employee extends Person{
+//     constructor(name, age, gender, email, salary, department){
+//         super(name, age, gender, email);
+//         this.salary = salary;
+//         this.department = department;
+//     }
+
+//     getEmployeeDetails() {
+//         return {
+//             salary: this.salary,
+//             department: this.department
+//         }
+//     }
+// }
+
+//================================================================================================
