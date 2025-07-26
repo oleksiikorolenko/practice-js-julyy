@@ -38,5 +38,59 @@ console.log(allTitles);
 
 allTitles.forEach(title => title.classList.add('active'));
 
+
+
 const navigation = document.querySelector('[data-topic = navigation]');
 console.log(navigation);
+
+navigation.setAttribute("style", "background-color: yellow");
+const navigationTopic = navigation.querySelector('p');
+navigationTopic.textContent = "Я змінив тут текст!";
+
+console.log(navigationTopic.textContent);
+
+const currentTopic = "manipulation";
+const manipulation = document.querySelector(`[data-topic = ${currentTopic}]`);
+console.log(manipulation);
+manipulation.setAttribute("style", "background-color: lightblue");
+
+let titleHasClassComp = null;
+allTitles.forEach(title => {
+    if (title.classList.contains('completed') === true) {
+        titleHasClassComp = title;
+      
+    }
+});
+
+console.log(titleHasClassComp);
+
+const li = titleHasClassComp.closest('li');
+li.remove();
+
+const paragraph = document.createElement('p');
+paragraph.textContent = "Об'єктна модель документа (Document Object Model)";
+title.append(paragraph);
+
+// const newLiElem = document.createElement('li');
+// const newHeader = document.createElement('h3');
+// newHeader.textContent = "Властивість innerHTML";
+// const newParagraph = document.createElement('p');
+// newParagraph.textContent = "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу.";
+// newLiElem.append(newHeader, newParagraph);
+// newLiElem.innerHTML = '<h3>Властивість innerHTML</h3><p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу."</p>'
+// list.append(newLiElem);
+
+const newHeader = "Властивість innerHTML";
+const newParagraph = "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу.";
+
+const markup = `<li><h3>${newHeader}</h3><p>${newParagraph}</p></li>`;
+
+list.insertAdjacentHTML("beforeend", markup);
+
+list.innerHTML = " ";
+
+
+
+
+
+
